@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+:root {
+    --button-background: #F3F3F3;
+    --button-border: #424242;
+    --button-background-hover: #E7E7E7;
+    --button-background-active: #CACACA;
+    --button-font: #2E2E2E;
+    --submit-background: #D5D5D5;
+    --submit-hover: #A0A0A0;
+    --input-border: #717171;
+    --bottom-border: #B8B8B8;
+    --error-message: #B81111;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 2rem;
+}
+
+.bold-message {
+    font-weight: 500;
+}
+
+#button-container {
+    display: flex;
+}
+
+#button-container,
+button {
+    margin: 0.5rem;
+}
+
+button {
+    font-size: 1rem;
+    border: 1px solid var(--button-border);
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+button:hover {
+    background: var(--button-background-hover);
+}
+
+button:active {
+    background: var(--button-background-active);
+}
+
+.form-container {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    border-radius: 0.5rem;
+    width: 25rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 2rem 2rem 2rem;
+}
+
+#log-in-submit-area {
+    border-bottom: 1px solid var(--bottom-border);
+    margin: 2rem 2rem 0 2rem;
+    padding-bottom: 2rem;
+}
+
+.input-area,
+#sign-up-submit-area {
+    margin: 2rem;
+}
+
+button,
+.submit {
+    cursor: pointer;
+}
+
+.submit {
+    background: var(--submit-background);
+    border: none;
+}
+
+.submit:hover {
+    background: var(--submit-hover);
+}
+
+button,
+input {
+    font-family: inherit;
+    color: var(--button-font);
+    background: var(--button-background);
+    border-radius: 0.25rem;
+}
+
+input {
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    border: 1px solid var(--input-border);
+    width: 20rem;
+    padding: 1rem;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.redirect-container {
+    margin: 1rem;
+}
+
+.input-area,
+#log-in-submit-area,
+.redirect-message,
+#sign-up-submit-area {
+    text-align: center;
+}
+
+.submit:hover,
+input:focus,
+a:hover {
+    transition: 0.2s;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+.redirect-message,
+.just-validate-error-label {
+    font-size: 0.9rem;
+    color: var(--error-message);
+}
+
+.just-validate-error-label {
+    text-align: left;
+    margin-left: 1rem;
+}
