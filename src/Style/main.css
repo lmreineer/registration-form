@@ -56,7 +56,6 @@ button:active {
 .form-container {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
     border-radius: 0.5rem;
-    width: 25rem;
 }
 
 .heading {
@@ -103,23 +102,11 @@ input {
     font-size: 0.9rem;
     border: 1px solid var(--input-border);
     width: 20rem;
-    padding: 1rem;
 }
 
 input:focus {
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.redirect-container {
-    margin: 1rem;
-}
-
-.input-area,
-#log-in-submit-area,
-.redirect-message,
-#sign-up-submit-area {
-    text-align: center;
 }
 
 .submit:hover,
@@ -146,4 +133,34 @@ a:hover {
 .just-validate-error-label {
     text-align: left;
     margin-left: 1rem;
+}
+
+.form-container,
+#success-field {
+    width: 25rem;
+}
+
+input,
+#success-field {
+    padding: 1rem;
+}
+
+#success-field {
+    border: 1px solid #11B811;
+    border-radius: 0.5rem;
+    background: #E8F8E8;
+    width: 25rem;
+}
+
+.redirect-container,
+.success-message {
+    margin: 1rem;
+}
+
+.input-area,
+#log-in-submit-area,
+.redirect-message,
+#sign-up-submit-area,
+.success-message {
+    text-align: center;
 }

@@ -2,10 +2,15 @@
 
 ## Installation
 
-1. Rename the ".env_sample" file to .env and put the values of "HOST_NAME", "USER_NAME", "PASSWORD", and "DB_NAME" with your own database credentials.
+1. To set up PHPMailer, follow this tutorial on YouTube: https://www.youtube.com/watch?v=9tD8lA9foxw. 
 
-2. Install PHPMailer by downloading its ZIP file on this link: https://github.com/PHPMailer/PHPMailer.
+2. Rename the ".env_sample" file to .env and put the values of 
+- "HOST_NAME", 
+- "USER_NAME", 
+- "PASSWORD", 
+- "DB_NAME",
+- "MAIL_HOST",
+- "MAIL_USER_NAME", and
+- "MAIL_PASSWORD"
 
-3. Unzip the file, then place it inside the project's folder.
-
-4. Make sure it is named as "PHPMailer".
+with your own database credentials.
