@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. To set up ***PHPMailer***, follow this tutorial on YouTube: https://www.youtube.com/watch?v=9tD8lA9foxw. 
+1. To set up **PHPMailer**, follow this tutorial on YouTube: https://www.youtube.com/watch?v=9tD8lA9foxw. 
 
 2. Install **Composer**
 
@@ -17,10 +17,10 @@
 - ```PASSWORD``` 
 - ```DB_NAME```
 
-    with your own **database** credentials, and
+with your own **database** credentials, and
 
 - ```MAIL_HOST```
 - ```MAIL_USER_NAME```
 - ```MAIL_PASSWORD```
 
-    your **email** credentials.
+your **email** credentials.
