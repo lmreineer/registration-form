@@ -125,12 +125,14 @@ a:hover {
 }
 
 .redirect-message,
-.just-validate-error-label {
+.just-validate-error-label,
+.input-message {
     font-size: 0.9rem;
     color: var(--error-message);
 }
 
-.just-validate-error-label {
+.just-validate-error-label,
+.input-message {
     text-align: left;
     margin-left: 1rem;
 }

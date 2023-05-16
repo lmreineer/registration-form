@@ -1,17 +1,17 @@
 /* eslint-disable no-undef */
 
-function checkUsername() {
+function checkEmailAvailability() {
     jQuery.ajax({
         url: '../php/database/email-availability-checker.php',
         data: `email=${$('.email').val()}`,
         type: 'POST',
         success(data) {
-            $('.just-validate-error-label').html(data);
+            $('.input-message').html(data);
         },
         error() { },
     });
 }
 
 $('.email').on('input', () => {
-    checkUsername();
+    checkEmailAvailability();
 });

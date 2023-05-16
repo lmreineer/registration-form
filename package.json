@@ -1,18 +1,15 @@
 {
-  "name": "sign-up-and-log-in-form-2",
+  "name": "registration-form",
   "version": "1.0.0",
-  "description": "",
-  "main": "docs/redirector.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "description": "1. To set up PHPMailer, follow this tutorial on YouTube: https://www.youtube.com/watch?v=9tD8lA9foxw.",
+  "main": "src/Script/log-in-validation.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.39.0",
+    "eslint": "^8.40.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5"
   }

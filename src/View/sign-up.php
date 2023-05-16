@@ -1,14 +1,6 @@
 <?php
 
-$stage = 1;
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if ($stage === 1) {
-        require  "../php/registration-email-sender.php";
-
-        $stage = 2;
-    }
-}
+require "../php/sign-up-process.php";
 
 ?>
 
@@ -47,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
                 <div class="input-area">
                     <input type="email" name="email" class="email" id="sign-up-email" placeholder="Email">
-                    <div class="just-validate-error-label"></div>
+                    <div class="input-message"></div>
                 </div>
                 <div class="input-area">
                     <input type="password" name="password" class="password" id="sign-up-password" placeholder="Password">

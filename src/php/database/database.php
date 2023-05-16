@@ -5,9 +5,9 @@ require_once "../../../vendor/autoload.php";
 $dotenv = Dotenv\Dotenv::createImmutable("../../../");
 $dotenv->load();
 
-$hostname = $_ENV["HOST_NAME"];
-$username = $_ENV["USER_NAME"];
-$password = $_ENV["PASSWORD"];
+$hostname = $_ENV["DB_HOST_NAME"];
+$username = $_ENV["DB_USER_NAME"];
+$password = $_ENV["DB_PASSWORD"];
 $db_name = $_ENV["DB_NAME"];
 
 // Create connection
