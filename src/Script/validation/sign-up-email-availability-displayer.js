@@ -2,7 +2,7 @@
 
 function checkEmailAvailability() {
     jQuery.ajax({
-        url: '../php/database/email-availability-checker.php',
+        url: '../php/database/sign-up-email-availability-checker.php',
         data: `email=${$('.email').val()}`,
         type: 'POST',
         success(data) {

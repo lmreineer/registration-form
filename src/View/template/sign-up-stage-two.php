@@ -16,8 +16,8 @@
 </div>
 <h1 class="heading">Registration email sent</h1>
 <div id="success-field">
-    <p class="success-message">The link to register your account has been sent to <b>
+    <p class="message">The link to register your account has been sent to <b>
             <?= strtolower($_POST["email"]); ?>
         </b>. </p>
-    <p class="success-message">Please open the link to finish sign up.</p>
+    <p class="message">Please open the link to finish sign up.</p>
 </div>

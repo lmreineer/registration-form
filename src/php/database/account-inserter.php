@@ -17,3 +17,6 @@ $stmt->execute();
 
 $stmt->close();
 $conn->close();
+
+session_unset();
+session_destroy();

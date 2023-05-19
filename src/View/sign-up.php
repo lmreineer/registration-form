@@ -26,6 +26,8 @@ if (isset($_SESSION["unique_code"])) {
 
     <title>Sign up to Company</title>
     <script src="../Script/validation/sign-up-validation.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="../Script/validation/sign-up-email-availability-displayer.js" defer></script>
 </head>
 
 <body>
@@ -37,9 +39,9 @@ if (isset($_SESSION["unique_code"])) {
             require_once "../php/database/account-inserter.php";
             require "template/sign-up-sucessful.html";
         } else if ($stage === 1) {
-            require "template/stage-one.php";
+            require "template/sign-up-stage-one.php";
         } elseif ($stage === 2) {
-            require "template/stage-two.php";
+            require "template/sign-up-stage-two.php";
         }
 
         ?>
