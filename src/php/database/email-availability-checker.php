@@ -1,5 +1,9 @@
 <?php
 
+require_once "../../../vendor/autoload.php";
+
+$dotenv = Dotenv\Dotenv::createImmutable("../../../");
+
 require __DIR__ . "/database.php";
 
 // check if email is already taken

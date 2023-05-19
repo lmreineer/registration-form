@@ -1,7 +1,10 @@
 <?php
 
+session_start();
+
 $stage = 1;
 
+// disable email sender if user is on stage two
 $emailSent = isset($_SESSION["emailSent"]) ? $_SESSION["emailSent"] : false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -15,3 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+
+// re-enable email sending if user is back on stage one
+$stage === 1 ? $_SESSION["emailSent"] = false : true;
