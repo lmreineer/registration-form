@@ -1,3 +1,10 @@
+<?php
+
+$emailSenderLink = "database/password-reset-email-sender.php";
+require "../php/sign-up-and-account-recovery-process.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,22 +12,25 @@
     <!-- include default codes -->
     <?php require "template/form-head.html";  ?>
 
-    <title>Log in to Company</title>
+    <title>Account Recovery</title>
     <script src="../Script/validation/account-recovery-validation.js" defer></script>
 </head>
 
 <body>
     <main class="container">
-        <h1 class="heading">Account Recovery</h1>
-        <form action="" method="post" class="form-container" id="account-recovery-form" autocomplete="off" spellcheck="false">
-            <p class="message">To recover your account by resetting your password, please enter your email where we could send a password reset link below:</p>
-            <div class="input-area">
-                <input type="email" name="email" class="email" id="account-recovery-email" placeholder="Email">
-            </div>
-            <div id="account-recovery-submit-area">
-                <input type="submit" class="submit" id="account-recovery-submit" value="Submit">
-            </div>
-        </form>
+        <?php
+
+        if (isset($_SESSION["unique_code"]) && isset($_GET["session"]) && $_GET["session"] === $_SESSION["unique_code"]) {
+            require "template/account-recovery/account-recovery-stage-three.php";
+        } elseif ($stage === 1) {
+            require "template/account-recovery/account-recovery-stage-one.php";
+        } elseif ($stage === 2) {
+            $_SESSION["email"] = $_POST["email"];
+
+            require "template/account-recovery/account-recovery-stage-two.php";
+        }
+
+        ?>
     </main>
 </body>
 
@@ -29,6 +39,6 @@
 <script>
     // avoid unwanted events when user is on stage two
     if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href)
+        window.history.replaceState(null, null, window.location.href);
     }
 </script>

@@ -1,6 +1,7 @@
 <?php
 
-require "../php/sign-up-process.php";
+$emailSenderLink = "registration-email-sender.php";
+require "../php/sign-up-and-account-recovery-process.php";
 
 // save information to session that was previously inputted
 isset($_POST["name"]) ? $_SESSION["name"] = $_POST["name"] : '';
@@ -10,10 +11,6 @@ isset($_POST["password"]) ? $_SESSION["password_hash"] = password_hash($_POST["p
 // attach saved information to variable if available
 $savedName = isset($_SESSION["name"]) ? $_SESSION["name"] : '';
 $savedEmail = isset($_SESSION["email"]) ? $_SESSION["email"] : '';
-
-if (isset($_SESSION["unique_code"])) {
-    $unique_code = $_SESSION["unique_code"];
-}
 
 ?>
 
@@ -35,13 +32,13 @@ if (isset($_SESSION["unique_code"])) {
 
         <?php
 
-        if (isset($_SESSION["unique_code"]) && isset($_GET["session"]) && $_GET["session"] === $unique_code) {
+        if (isset($_SESSION["unique_code"]) && isset($_GET["session"]) && $_GET["session"] === $_SESSION["unique_code"]) {
             require_once "../php/database/account-inserter.php";
-            require "template/sign-up-sucessful.html";
+            require "template/sign-up/sign-up-sucessful.html";
         } else if ($stage === 1) {
-            require "template/sign-up-stage-one.php";
+            require "template/sign-up/sign-up-stage-one.php";
         } elseif ($stage === 2) {
-            require "template/sign-up-stage-two.php";
+            require "template/sign-up/sign-up-stage-two.php";
         }
 
         ?>
@@ -54,6 +51,6 @@ if (isset($_SESSION["unique_code"])) {
 <script>
     // avoid unwanted events when user is on stage two
     if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href)
+        window.history.replaceState(null, null, window.location.href);
     }
 </script>

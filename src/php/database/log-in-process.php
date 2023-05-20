@@ -24,7 +24,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 
             $_SESSION["name"] = $name;
 
-            header("Location: ../../src/View/template/log-in-successful.php");
+            header("Location: ../../src/View/template/log-in/log-in-successful.php");
             exit;
         } else {
             $logInFailure = true;
@@ -33,3 +33,5 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         $logInFailure = true;
     }
 }
+
+$conn->close();

@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stage = 2;
 
         if (!$emailSent) {
-            require_once "registration-email-sender.php";
+            require_once $emailSenderLink;
             $_SESSION["emailSent"] = true;
         }
     }
