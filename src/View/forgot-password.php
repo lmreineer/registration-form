@@ -20,8 +20,13 @@ require "../php/sign-up-and-account-recovery-process.php";
     <main class="container">
         <?php
 
-        if (isset($_SESSION["unique_code"]) && isset($_GET["session"]) && $_GET["session"] === $_SESSION["unique_code"]) {
-            require "template/account-recovery/account-recovery-stage-three.php";
+        if (isset($_SESSION["unique_code"]) && isset($_GET["session"])) {
+            if ($_GET["session"] === $_SESSION["unique_code"]) {
+                require "template/account-recovery/account-recovery-stage-three.php";
+            } else {
+                header("Location: forgot-password.php");
+                exit;
+            }
         } elseif ($stage === 1) {
             require "template/account-recovery/account-recovery-stage-one.php";
         } elseif ($stage === 2) {

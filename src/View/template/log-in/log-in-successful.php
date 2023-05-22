@@ -20,7 +20,15 @@
                 <?= ucfirst($_SESSION["name"]); ?>
             </p>
         </div>
+        <p class="message"><a href="../../log-in.php">Log out</a></p>
     </main>
 </body>
 
 </html>
+
+<?php
+
+session_unset();
+session_destroy();
+
+?>

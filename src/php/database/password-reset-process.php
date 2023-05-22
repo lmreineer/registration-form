@@ -28,7 +28,7 @@ if (isset($_POST["repeat-password"])) {
 
         $secondResult = $conn->query($secondQuery);
 
-        header("Location: ../../View/template/account-recovery/account-recovery-succesful.html");
+        header("Location: ../../View/template/account-recovery/account-recovery-succesful.php");
         exit;
     } else {
         echo "S";

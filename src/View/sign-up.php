@@ -32,9 +32,14 @@ $savedEmail = isset($_SESSION["email"]) ? $_SESSION["email"] : '';
 
         <?php
 
-        if (isset($_SESSION["unique_code"]) && isset($_GET["session"]) && $_GET["session"] === $_SESSION["unique_code"]) {
-            require_once "../php/database/account-inserter.php";
-            require "template/sign-up/sign-up-sucessful.html";
+        if (isset($_SESSION["unique_code"]) && isset($_GET["session"])) {
+            if ($_GET["session"] === $_SESSION["unique_code"]) {
+                require_once "../php/database/account-inserter.php";
+                require "template/sign-up/sign-up-sucessful.html";
+            } else {
+                header("Location: sign-up.php");
+                exit;
+            }
         } else if ($stage === 1) {
             require "template/sign-up/sign-up-stage-one.php";
         } elseif ($stage === 2) {
