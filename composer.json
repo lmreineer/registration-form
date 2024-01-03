@@ -1,11 +1,17 @@
 {
-    "name": "lance/registration-form",
+    "name": "lance1/registration-form",
     "autoload": {
         "psr-4": {
-            "Lance\\RegistrationForm\\": "src/"
+            "Lance1\\RegistrationForm\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "lance",
+            "email": "lmreineer@gmail.com"
+        }
+    ],
     "require": {
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.6"
     }
 }

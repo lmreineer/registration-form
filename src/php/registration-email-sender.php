@@ -25,7 +25,7 @@ $mail->Password = $_ENV["MAIL_PASSWORD"];
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Port = 465;
 
-$mail->setFrom("thewebsitenoreply@gmail.com", "Company");
+$mail->setFrom("youremailaddress@email.com", "Company");
 $mail->addAddress($_POST["email"]);
 
 $mail->isHTML(true);
