@@ -25,13 +25,13 @@ $mail->Password = $_ENV["MAIL_PASSWORD"];
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Port = 465;
 
-$mail->setFrom("youremailaddress@email.com", "Company");
+$mail->setFrom("enteryouremailhere@email.com", "Name");
 $mail->addAddress($_POST["email"]);
 
 $mail->isHTML(true);
 
 $mail->Subject = "Verify your Company account";
-$mail->Body    = "Hello, <br><br>  You have chosen this email to be the email of your new Company account. To verify that this email belongs to you, please open the link below: <br><br> <b><a href='http://localhost/php-projects/registration-form/src/View/sign-up.php?session={$unique_code}'>http://localhost/php-projects/registration-form/src/View/sign-up.php?session={$unique_code}</a></b> <br><br> Thank you for signing up.";
-$mail->AltBody = "Hello, you have chosen this email to be the email of your new Company account. To verify that this email belongs to you, please open this link: http://localhost/php-projects/registration-form/src/View/sign-up.php?session={$unique_code}";
+$mail->Body    = "Hello, <br><br>  You have chosen this email to be the email of your new Company account. To verify that this email belongs to you, please open the link below: <br><br> <b><a href='http://localhost/registration-form/src/View/sign-up.php?session={$unique_code}'>http://localhost/registration-form/src/View/sign-up.php?session={$unique_code}</a></b> <br><br> Thank you for signing up.";
+$mail->AltBody = "Hello, you have chosen this email to be the email of your new Company account. To verify that this email belongs to you, please open this link: http://localhost/registration-form/src/View/sign-up.php?session={$unique_code}";
 
 $mail->send();

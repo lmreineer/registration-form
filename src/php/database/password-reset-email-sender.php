@@ -28,14 +28,14 @@ $mail->Password = $_ENV["MAIL_PASSWORD"];
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 $mail->Port = 465;
 
-$mail->setFrom("thewebsitenoreply@gmail.com", "Company");
+$mail->setFrom("enteryouremailhere@email.com", "Name");
 $mail->addAddress($_POST["email"]);
 
 $mail->isHTML(true);
 
 $mail->Subject = "Reset your Company account password";
-$mail->Body    = "Hello, <br><br> You have requested to recover your account by resetting your password on this email. To confirm that you performed this, please open the link below: <br><br> <b><a href='http://localhost/php-projects/registration-form/src/View/forgot-password.php?session={$unique_code}'>http://localhost/php-projects/registration-form/src/View/forgot-password.php?session={$unique_code}</a></b>";
-$mail->AltBody = "Hello, you have requested to recover your account by resetting your password on this email. To confirm that you performed this, please open this link: http://localhost/php-projects/registration-form/src/View/forgot-password.php?session={$unique_code}";
+$mail->Body    = "Hello, <br><br> You have requested to recover your account by resetting your password on this email. To confirm that you performed this, please open the link below: <br><br> <b><a href='http://localhost/registration-form/src/View/forgot-password.php?session={$unique_code}'>http://localhost/registration-form/src/View/forgot-password.php?session={$unique_code}</a></b>";
+$mail->AltBody = "Hello, you have requested to recover your account by resetting your password on this email. To confirm that you performed this, please open this link: http://localhost/registration-form/src/View/forgot-password.php?session={$unique_code}";
 
 $email = $_POST["email"];
 
