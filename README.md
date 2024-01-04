@@ -2,11 +2,11 @@
 
 ## Installation
 
-1. To set up **PHPMailer**, follow this tutorial on YouTube: https://www.youtube.com/watch?v=9tD8lA9foxw. 
+1. To set up **PHPMailer**, follow this tutorial on YouTube: [https://www.youtube.com/watch?v=9tD8lA9foxw](https://youtu.be/9tD8lA9foxw?t=54). 
 
 2. Install **Composer**
 
-4. Run each in order:
+4. On the folder, run each in order:
 - ```composer init```
 - ```composer install```
 - ```composer require vlucas/phpdotenv```
