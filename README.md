@@ -12,7 +12,7 @@
 - `composer install`
 - `composer require vlucas/phpdotenv`
 
-5. Rename ".env_sample file to ".env" then put the empty values of:
+4. Rename ".env_sample file to ".env" then put the empty values of:
 
 - `HOST_NAME`
 - `USER_NAME`
