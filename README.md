@@ -19,10 +19,10 @@
 - `PASSWORD`
 - `DB_NAME`
 
-with your own **database** credentials, and
+  with your own **database** credentials, and
 
 - `MAIL_HOST`
 - `MAIL_USER_NAME`
 - `MAIL_PASSWORD`
 
-your **email** credentials.
+  your **email** credentials.
